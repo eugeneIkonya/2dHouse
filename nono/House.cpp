@@ -78,6 +78,7 @@ public:
             //drawing windows
             
             //window 1
+            glLineWidth(3);
             glBegin(GL_POLYGON);
             glColor3f(0.420, 0.557, 0.137);
             glVertex2f(250, 250);
@@ -86,7 +87,7 @@ public:
             glVertex2f(250, 350);
             glEnd();
             
-            glLineWidth(3);
+            
             //window 1 lines
             glBegin(GL_LINES);
             glColor3f(0.392, 0.584, 0.929);
@@ -121,6 +122,7 @@ public:
             glEnd();
             
             //door
+            glColor3f(0.420, 0.557, 0.137);
             glBegin(GL_POLYGON);
             glVertex2f(400, 100);
             glVertex2f(500, 100);
@@ -129,11 +131,10 @@ public:
             glEnd();
             
             //door Knob
-            glPointSize(20);
-            glBegin(GL_POINTS);
-            glVertex2f(480, 225);
-            glEnd();
+            glColor3f(0.392, 0.584, 0.929);
+            circle(6, 6, 480, 225);
             
+            glLineWidth(2);
             //drawing the circle
             glColor3f(0.392, 0.584, 0.929);
             semiCircle(200, 450, 500,0.0f,180,5);
